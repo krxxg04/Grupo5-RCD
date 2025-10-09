@@ -1,7 +1,7 @@
 ---
-title: 'First post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 08 2022'
+title: 'Sucursal - Puno'
+description: 'Por ultimo la sucursal de Puno, ubicada en la ciudad de Puno, es responsable de atender a nuestros clientes en la región sur del país.'
+pubDate: 'Oct 6 2025'
 heroImage: '../../assets/blog-placeholder-3.jpg'
 ---
 

@@ -13,35 +13,270 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+			<h1>CASO 1 - GRUPO 5</h1>
+			<img src="../public/grupo-5.png" alt="Grupo 5" />
 			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
+				MIEMPRESA presenta problemas operativos por la falta de una red estandarizada y documentada. La expansión sin planificación ha causado incompatibilidades y duplicidad de direcciones IP entre sedes, generando fallas de conectividad y afectando las operaciones. Se requiere una solución integral que corrija estos problemas y permita un crecimiento ordenado a futuro.
 			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
+			<p>Objetivos de la solución propuesta:</p>
 			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
+				<li>Estandarización de la red</li>
+				<li>Escalabilidad</li>
+				<li>Mejora de la seguridad</li>
+				<li>Documentación y gestión</li>
 			</ul>
 			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
+				<h2>Análisis de los requisitos de la red</h2>
+				<table>
+        <thead>
+            <tr>
+                <th>Concepto</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dirección de red de Dominio</td>
+                <td>172.21.0.0/16</td>
+            </tr>
+            <tr>
+                <td>Nombre del Dominio</td>
+                <td>miempresa.com</td>
+            </tr>
+            <tr>
+                <td>Dirección web</td>
+                <td>www.miempresa.com</td>
+            </tr>
+            <tr>
+                <td>Dirección de correo</td>
+                <td>mail.miempresa.com</td>
+            </tr>
+            <tr>
+                <td>Dirección de red del ISP</td>
+                <td>106.130.232.0/24</td>
+            </tr>
+            <tr>
+                <td>Dirección IP del DNS del ISP</td>
+                <td>106.0.0.10</td>
+            </tr>
+        </tbody>
+    </table>
 			</p>
 			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+				<h2>Requisitos de la red de la Sede La Libertad</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre de la subred</th>
+                <th>Requisitos de host por subred</th>
+                <th>Proyección 20%</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ventas</td>
+                <td>79</td>
+                <td>94.8</td>
+            </tr>
+            <tr>
+                <td>Administración</td>
+                <td>40</td>
+                <td>48</td>
+            </tr>
+            <tr>
+                <td>Finanzas</td>
+                <td>16</td>
+                <td>19.2</td>
+            </tr>
+            <tr>
+                <td>Wifi Ejecutivos</td>
+                <td>12</td>
+                <td>14.4</td>
+            </tr>
+            <tr>
+                <td>Marketing</td>
+                <td>12</td>
+                <td>14.4</td>
+            </tr>
+            <tr>
+                <td>Logística</td>
+                <td>10</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Wifi Clientes</td>
+                <td>7</td>
+                <td>8.4</td>
+            </tr>
+            <tr>
+                <td>Servidores</td>
+                <td>4</td>
+                <td>4.8</td>
+            </tr>
+        </tbody>
+    </table>
+			</p>
+			<p>
+				<h2>Requisitos de la red de la Sede Ica</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre de la subred</th>
+                <th>Requisitos de host por subred</th>
+                <th>Proyección 20%</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ventas</td>
+                <td>54</td>
+                <td>64.8</td>
+            </tr>
+            <tr>
+                <td>Administración</td>
+                <td>27</td>
+                <td>32.4</td>
+            </tr>
+            <tr>
+                <td>Finanzas</td>
+                <td>11</td>
+                <td>13.2</td>
+            </tr>
+            <tr>
+                <td>Wifi Ejecutivos</td>
+                <td>9</td>
+                <td>10.8</td>
+            </tr>
+            <tr>
+                <td>Marketing</td>
+                <td>8</td>
+                <td>9.6</td>
+            </tr>
+            <tr>
+                <td>Logística</td>
+                <td>7</td>
+                <td>8.4</td>
+            </tr>
+            <tr>
+                <td>Wifi Clientes</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Servidores</td>
+                <td>3</td>
+                <td>3.6</td>
+            </tr>
+        </tbody>
+    </table>
+			</p>
+			<p>
+				<h2>Requisitos de la red de la Sede Huanuco</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre de la subred</th>
+                <th>Requisitos de host por subred</th>
+                <th>Proyección 20%</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ventas</td>
+                <td>50</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>Administración</td>
+                <td>25</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Finanzas</td>
+                <td>10</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Wifi Ejecutivos</td>
+                <td>8</td>
+                <td>9.6</td>
+            </tr>
+            <tr>
+                <td>Marketing</td>
+                <td>7</td>
+                <td>8.4</td>
+            </tr>
+            <tr>
+                <td>Logística</td>
+                <td>6</td>
+                <td>7.2</td>
+            </tr>
+            <tr>
+                <td>Wifi Clientes</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Servidores</td>
+                <td>3</td>
+                <td>3.6</td>
+            </tr>
+        </tbody>
+    </table>
+			</p>
+			<p>
+				<h2>Requisitos de la red de la Sede Puno</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre de la subred</th>
+                <th>Requisitos de host por subred</th>
+                <th>Proyección 20%</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ventas</td>
+                <td>48</td>
+                <td>57.6</td>
+            </tr>
+            <tr>
+                <td>Administración</td>
+                <td>24</td>
+                <td>28.8</td>
+            </tr>
+            <tr>
+                <td>Finanzas</td>
+                <td>10</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Wifi Ejecutivos</td>
+                <td>8</td>
+                <td>9.6</td>
+            </tr>
+            <tr>
+                <td>Marketing</td>
+                <td>7</td>
+                <td>8.4</td>
+            </tr>
+            <tr>
+                <td>Logística</td>
+                <td>6</td>
+                <td>7.2</td>
+            </tr>
+            <tr>
+                <td>Wifi Clientes</td>
+                <td>4</td>
+                <td>4.8</td>
+            </tr>
+            <tr>
+                <td>Servidores</td>
+                <td>3</td>
+                <td>3.6</td>
+            </tr>
+        </tbody>
+    </table>
 			</p>
 		</main>
 		<Footer />
