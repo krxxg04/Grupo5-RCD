@@ -1,7 +1,7 @@
 ---
-title: 'Second post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 15 2022'
+title: 'Sucursal - Huanuco'
+description: 'Esta sucursal está ubicada en la ciudad de Huánuco y se encarga de atender a nuestros clientes en la región central del país.'
+pubDate: 'Oct 7 2025'
 heroImage: '../../assets/blog-placeholder-4.jpg'
 ---
 

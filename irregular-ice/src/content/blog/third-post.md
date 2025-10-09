@@ -1,7 +1,7 @@
 ---
-title: 'Third post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 22 2022'
+title: 'Sucursal - Ica'
+description: 'Esta sucursal se encuentra en la ciudad de Ica y es responsable de gestionar las operaciones. Nuestro equipo en Ica está dedicado a ofrecer un servicio excepcional y soluciones adaptadas a las necesidades de nuestros clientes en la región.'
+pubDate: 'Oct 8 2025'
 heroImage: '../../assets/blog-placeholder-2.jpg'
 ---
 

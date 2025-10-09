@@ -1,8 +1,8 @@
 ---
-title: 'Markdown Style Guide'
-description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-pubDate: 'Jun 19 2024'
-heroImage: '../../assets/blog-placeholder-1.jpg'
+title: 'Sede Principal - Lima'
+description: 'La sede principal de MIEMPRESA se encuentra en Lima, Perú, y es el centro neurálgico de todas las operaciones corporativas. Desde aquí se gestionan las actividades estratégicas, financieras y administrativas que impulsan el crecimiento y la expansión de la empresa a nivel global.'
+pubDate: 'Oct 10 2025'
+heroImage: '../../assets/blog-placeholder-about.jpg'
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
