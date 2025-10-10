@@ -2,30 +2,38 @@
 title: 'Sucursal - La Libertad'
 description: 'Es la sede de nuestra filial en La Libertad, ubicada en la ciudad de Trujillo. Esta sucursal se encarga de atender a nuestros clientes en la región, ofreciendo servicios personalizados y soluciones adaptadas a sus necesidades específicas.'
 pubDate: 'Oct 9 2025'
-heroImage: '../../assets/blog-placeholder-5.jpg'
+heroImage: '../../assets/LaLibertad.jpg'
 ---
 
-This theme comes with the [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/) integration installed and configured in your `astro.config.mjs` config file. If you prefer not to use MDX, you can disable support by removing the integration from your config file.
+### Topología Física y Lógica de la red (La Libertad)
 
-## Why MDX?
+![alt text](../../../public/LaLibertad-Sede.png)
 
-MDX is a special flavor of Markdown that supports embedded JavaScript & JSX syntax. This unlocks the ability to [mix JavaScript and UI Components into your Markdown content](https://docs.astro.build/en/guides/markdown-content/#mdx-features) for things like interactive charts or alerts.
+##### Nombre: Sucursal 1 - La Libertad
+##### Dirección IP: 172.21.44.0/22
 
-If you have existing content authored in MDX, this integration will hopefully make migrating to Astro a breeze.
+| Unidad Organizacional | Nombre de la VLAN | VLAN ID (VID) | Requisitos para host actuales | Requisitos para host actuales (20%) | Longitud de prefijo (LP) |
+|-----------------------|-------------------|---------------:|-------------------------------:|------------------------------------:|-------------------------:|
+| Ventas                | VENTAS            |             10 |                            198 |                              237.6 | /24                      |
+| Administracion        | ADMINISTRACION    |             20 |                            100 |                              120.0 | /25                      |
+| Finanzas              | FINANZAS          |             30 |                             41 |                               49.2 | /26                      |
+| Wifi-Ejecutivos       | WIFI-EJECUTIVO    |             40 |                             31 |                               37.2 | /26                      |
+| Marketing             | MARKETING         |             50 |                             29 |                               34.8 | /27                      |
+| Logistica             | LOGISTICA         |             60 |                             25 |                               30.0 | /27                      |
+| Nativa                | NATIVA            |             70 |                             20 |                               24.0 | /27                      |
+| Wifi-Clientes         | WIFI-CLIENTE      |             80 |                             18 |                               21.6 | /27                      |
+| Servidores            | SERVIDORES        |             90 |                             10 |                               12.0 | /28                      |
+| **Total**             |                   |                |                            472 |                              566.4 |                          |
 
-## Example
+| Mascara Sub red      | Direccion de red    | Primer host       | Ultimo Host       | Direccion broadcast |
+|----------------------|---------------------|-------------------|-------------------:|--------------------:|
+| 255.255.255.0        | 172.21.40.0         | 172.21.40.1       | 172.21.40.254     | 172.21.40.255       |
+| 255.255.255.128      | 172.21.41.0         | 172.21.41.1       | 172.21.41.126     | 172.21.41.127       |
+| 255.255.255.192      | 172.21.41.128       | 172.21.41.129     | 172.21.41.190     | 172.21.41.191       |
+| 255.255.255.192      | 172.21.41.192       | 172.21.41.193     | 172.21.41.254     | 172.21.41.255       |
+| 255.255.255.224      | 172.21.42.0         | 172.21.42.1       | 172.21.42.30      | 172.21.42.31        |
+| 255.255.255.224      | 172.21.42.32        | 172.21.42.33      | 172.21.42.62      | 172.21.42.63        |
+| 255.255.255.224      | 172.21.42.64        | 172.21.42.65      | 172.21.42.94      | 172.21.42.95        |
+| 255.255.255.224      | 172.21.42.96        | 172.21.42.97      | 172.21.42.126     | 172.21.42.127       |
+| 255.255.255.240      | 172.21.42.128       | 172.21.42.129     | 172.21.42.142     | 172.21.42.143       |
 
-Here is how you import and use a UI component inside of MDX.  
-When you open this page in the browser, you should see the clickable button below.
-
-import HeaderLink from '../../components/HeaderLink.astro';
-
-<HeaderLink href="#" onclick="alert('clicked!')">
-	Embedded component in MDX
-</HeaderLink>
-
-## More Links
-
-- [MDX Syntax Documentation](https://mdxjs.com/docs/what-is-mdx)
-- [Astro Usage Documentation](https://docs.astro.build/en/guides/markdown-content/#markdown-and-mdx-pages)
-- **Note:** [Client Directives](https://docs.astro.build/en/reference/directives-reference/#client-directives) are still required to create interactive components. Otherwise, all components in your MDX will render as static HTML (no JavaScript) by default.

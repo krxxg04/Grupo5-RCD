@@ -1,5 +1,5 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+import AboutHeroImage from '../assets/Peru-Nacional.jpg';
 import Layout from '../layouts/BlogPost.astro';
 ---
 
@@ -13,20 +13,645 @@ import Layout from '../layouts/BlogPost.astro';
 		El presente proyecto tiene como finalidad diseñar y actualizar la infraestructura de red empresarial de la transnacional MIEMPRESA, cuya casa matriz se encuentra en Perú, y que cuenta con filiales en Argentina, Chile, Ecuador y Colombia, además de múltiples sedes nacionales en Lima, La Libertad, Ica, Huánuco y Puno. El propósito es implementar una red sólida, segura y escalable que permita una comunicación fluida entre todas las sedes, garantizando acceso confiable a los recursos corporativos y soporte para el crecimiento futuro.
 	</p>
 
-	<p>
-		Actualmente, la empresa presenta una infraestructura de red obsoleta y desorganizada, producto de una expansión no planificada. Cada nueva sede fue implementada de forma independiente, con equipos de diferentes fabricantes y falta de documentación técnica, generando problemas de incompatibilidad, duplicidad de direcciones IP y dificultades en el soporte técnico. Estas deficiencias afectan la conectividad, seguridad y productividad de la organización, por lo que se requiere una reestructuración integral.
-	</p>
+		<h4>Esquema de direccionamiento IP para todas las Filiales de la Multinacional (FLSM)</h4>
+		<h4>Sucursal Perú</h4>
+        <div class="header-info">
+            <p>Nombre: Sucursal Perú</p>
+            <p>Dirección IP: 172.21.32.0 /19</p>
+        </div>
+		<table>
+            <thead>
+                <tr>
+                    <th>Subred</th>
+                    <th>1er octeto</th>
+                    <th>2do octeto</th>
+                    <th>3er octeto</th>
+                    <th>4to octeto</th>
+                    <th>Direccion de red</th>
+                    <th>Longitud de Prefijo</th>
+                    <th>Nombre de la red</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>S0</td>
+                    <td>10101100</td>
+                    <td>00010101</td>
+                    <td>00000000</td>
+                    <td>00000000</td>
+                    <td>172.21.0.0</td>
+                    <td>/19</td>
+                    <td>Reservado</td>
+                </tr>
+                <tr>
+                    <td>S1</td>
+                    <td>10101100</td>
+                    <td>00010101</td>
+                    <td>00100000</td>
+                    <td>00000000</td>
+                    <td>172.21.32.0</td>
+                    <td>/19</td>
+                    <td>Peru</td>
+                </tr>
+                <tr>
+                    <td>S2</td>
+                    <td>10101100</td>
+                    <td>00010101</td>
+                    <td>01000000</td>
+                    <td>00000000</td>
+                    <td>172.21.64.0</td>
+                    <td>/19</td>
+                    <td>Chile</td>
+                </tr>
+                <tr>
+                    <td>S3</td>
+                    <td>10101100</td>
+                    <td>00010101</td>
+                    <td>01100000</td>
+                    <td>00000000</td>
+                    <td>172.21.96.0</td>
+                    <td>/19</td>
+                    <td>Argentina</td>
+                </tr>
+                <tr>
+                    <td>S4</td>
+                    <td>10101100</td>
+                    <td>00010101</td>
+                    <td>10000000</td>
+                    <td>00000000</td>
+                    <td>172.21.128.0</td>
+                    <td>/19</td>
+                    <td>Ecuador</td>
+                </tr>
+                <tr>
+                    <td>S5</td>
+                    <td>10101100</td>
+                    <td>00010101</td>
+                    <td>10100000</td>
+                    <td>00000000</td>
+                    <td>172.21.160.0</td>
+                    <td>/19</td>
+                    <td>Colombia</td>
+                </tr>
+                <tr>
+                    <td>S6</td>
+                    <td>10101100</td>
+                    <td>00010101</td>
+                    <td>11000000</td>
+                    <td>00000000</td>
+                    <td>172.21.192.0</td>
+                    <td>/19</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>S7</td>
+                    <td>10101100</td>
+                    <td>00010101</td>
+                    <td>11100000</td>
+                    <td>00000000</td>
+                    <td>172.21.224.0</td>
+                    <td>/19</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
 
 	<p>
-		El trabajo se desarrollará en dos fases principales:
-		En la primera fase (Semana 7) se abordará el diseño e implementación de la red LAN para la sede principal en Lima. Se aplicará direccionamiento IP con VLSM, segmentación mediante VLANs, configuración de InterVLAN Routing, redes inalámbricas seguras (WPA2) y pruebas de conectividad intra e inter VLAN para validar la operación de la red interna. Además, se realizará el dimensionamiento técnico-económico seleccionando los equipos de red adecuados (switches, routers, access points, firewalls) y evaluando su costo.
 	</p>
 
-	<p>
-		En la segunda fase (Semana 15) se extenderá la solución hacia la red WAN, conectando la sede principal con las filiales bajo una topología tipo Hub and Spoke. Se implementará enrutamiento dinámico (RIPv2) para las redes internas y enrutamiento estático hacia los proveedores de Internet (ISP1 e ISP2) con enlaces redundantes que aseguren alta disponibilidad. También se configurarán los servicios esenciales de red (FTP, HTTP, DNS, DHCP, correo electrónico) y las políticas de seguridad en capas, utilizando firewalls y accesos restringidos por VLAN.
-	</p>
+	<h4>Esquema de direccionamiento IP para todas las sedes (FLSM)</h4>
+	<h4>Sucursal Perú</h4>
+        <div class="header-info">
+            <p>Nombre: Sucursal Perú</p>
+            <p>Dirección IP: 172.21.32.0 /19</p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subred</th>
+                    <th>1er octeto</th>
+                    <th>2do octeto</th>
+                    <th>3er octeto</th>
+                    <th>4to octeto</th>
+                    <th>Direccion de red</th>
+                    <th>Longitud de Prefijo</th>
+                    <th>Nombre de la red</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>S0</td>
+                    <td>10101100</td>
+                    <td>00010101</td>
+                    <td>00000000</td>
+                    <td>00000000</td>
+                    <td>172.21.32.0</td>
+                    <td>/22</td>
+                    <td>Reservado</td>
+                </tr>
+                <tr>
+                    <td>S1</td>
+                    <td>10101100</td>
+                    <td>00010101</td>
+                    <td>00010000</td>
+                    <td>00000000</td>
+                    <td>172.21.36.0</td>
+                    <td>/22</td>
+                    <td>Redes WAN</td>
+                </tr>
+                <tr>
+                    <td>S2</td>
+                    <td>10101100</td>
+                    <td>00010101</td>
+                    <td>00100000</td>
+                    <td>00000000</td>
+                    <td>172.21.40.0</td>
+                    <td>/22</td>
+                    <td>Lima</td>
+                </tr>
+                <tr>
+                    <td>S3</td>
+                    <td>10101100</td>
+                    <td>00010101</td>
+                    <td>00000000</td>
+                    <td>00000000</td>
+                    <td>172.21.44.0</td>
+                    <td>/22</td>
+                    <td>La Libertad</td>
+                </tr>
+                <tr>
+                    <td>S4</td>
+                    <td>10101100</td>
+                    <td>00010101</td>
+                    <td>00010000</td>
+                    <td>00000000</td>
+                    <td>172.21.48.0</td>
+                    <td>/22</td>
+                    <td>Ica</td>
+                </tr>
+                <tr>
+                    <td>S5</td>
+                    <td>10101100</td>
+                    <td>00010101</td>
+                    <td>00100000</td>
+                    <td>00000000</td>
+                    <td>172.21.52.0</td>
+                    <td>/22</td>
+                    <td>Huanuco</td>
+                </tr>
+                <tr>
+                    <td>S6</td>
+                    <td>10101100</td>
+                    <td>00010101</td>
+                    <td>00110000</td>
+                    <td>00000000</td>
+                    <td>172.21.56.0</td>
+                    <td>/22</td>
+                    <td>Puno</td>
+                </tr>
+            </tbody>
+        </table>
 
 	<p>
-		Finalmente, el proyecto incluirá una evaluación de soluciones Cloud (AWS, Azure, GCP) para analizar la viabilidad técnica y económica de migrar parte de la infraestructura o implementar un servidor de respaldo en la nube, comparando costos, prestaciones y beneficios. Esta estrategia permitirá que MIEMPRESA disponga de una infraestructura híbrida moderna, segura y adaptable a los desafíos tecnológicos y operativos del futuro.
 	</p>
+
+	<h4>Comandos Básicos de Diagnóstico y Configuración</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Comando</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Diagnóstico</td>
+                        <td><span class="comando">show ip interface brief</span></td>
+                        <td>Muestra resumen de interfaces IP</td>
+                    </tr>
+                    <tr>
+                        <td>Diagnóstico</td>
+                        <td><span class="comando">show ip route</span></td>
+                        <td>Muestra tabla de enrutamiento</td>
+                    </tr>
+                    <tr>
+                        <td>Configuración</td>
+                        <td><span class="comando">configure terminal</span></td>
+                        <td>Entra al modo de configuración</td>
+                    </tr>
+                    <tr>
+                        <td>Routing</td>
+                        <td><span class="comando">ip routing</span></td>
+                        <td>Habilita enrutamiento IP</td>
+                    </tr>
+                    <tr>
+                        <td>Interfaz</td>
+                        <td><span class="comando">interface g0/0</span><br><span class="comando">no shutdown</span></td>
+                        <td>Activa interfaz GigabitEthernet</td>
+                    </tr>
+                    <tr>
+                        <td>Hostname</td>
+                        <td><span class="comando">hostname CORE-[CIUDAD]</span></td>
+                        <td>Configura nombre del dispositivo Core</td>
+                    </tr>
+                </tbody>
+            </table>
+
+ 	<p>
+	</p>
+
+	<h4>Creación de VLANs</h4>
+	<table>
+                <thead>
+                    <tr>
+                        <th>VLAN ID</th>
+                        <th>Nombre</th>
+                        <th>Comandos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="vlan-number">VLAN 10</span></td>
+                        <td>VENTAS</td>
+                        <td><span class="comando">vlan 10</span><br><span class="comando">name VENTAS</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vlan-number">VLAN 20</span></td>
+                        <td>ADMINISTRACION</td>
+                        <td><span class="comando">vlan 20</span><br><span class="comando">name ADMINISTRACION</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vlan-number">VLAN 30</span></td>
+                        <td>FINANZAS</td>
+                        <td><span class="comando">vlan 30</span><br><span class="comando">name FINANZAS</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vlan-number">VLAN 40</span></td>
+                        <td>WIFI-EJECUTIVO</td>
+                        <td><span class="comando">vlan 40</span><br><span class="comando">name WIFI-EJECUTIVO</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vlan-number">VLAN 50</span></td>
+                        <td>MARKETING</td>
+                        <td><span class="comando">vlan 50</span><br><span class="comando">name MARKETING</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vlan-number">VLAN 60</span></td>
+                        <td>LOGISTICA</td>
+                        <td><span class="comando">vlan 60</span><br><span class="comando">name LOGISTICA</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vlan-number">VLAN 70</span></td>
+                        <td>NATIVA</td>
+                        <td><span class="comando">vlan 70</span><br><span class="comando">name NATIVA</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vlan-number">VLAN 80</span></td>
+                        <td>WIFI-CLIENTE</td>
+                        <td><span class="comando">vlan 80</span><br><span class="comando">name WIFI-CLIENTE</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="vlan-number">VLAN 90</span></td>
+                        <td>SERVIDORES</td>
+                        <td><span class="comando">vlan 90</span><br><span class="comando">name SERVIDORES</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+	<p>
+	</p>
+
+<h4>Configuración de Puertos de Acceso por Switch</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Switch</th>
+                        <th>Puerto</th>
+                        <th>VLAN</th>
+                        <th>Comandos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2"><strong>SW1</strong></td>
+                        <td>fa0/1</td>
+                        <td>20 (ADMINISTRACION)</td>
+                        <td><span class="comando">interface fa0/1</span><br><span class="comando">switchport mode access</span><br><span class="comando">switchport access vlan 20</span></td>
+                    </tr>
+                    <tr>
+                        <td>fa0/2</td>
+                        <td>20 (ADMINISTRACION)</td>
+                        <td><span class="comando">interface fa0/2</span><br><span class="comando">switchport mode access</span><br><span class="comando">switchport access vlan 20</span></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"><strong>SW2</strong></td>
+                        <td>fa0/1</td>
+                        <td>20 (ADMINISTRACION)</td>
+                        <td><span class="comando">interface fa0/1</span><br><span class="comando">switchport mode access</span><br><span class="comando">switchport access vlan 20</span></td>
+                    </tr>
+                    <tr>
+                        <td>fa0/2</td>
+                        <td>60 (LOGISTICA)</td>
+                        <td><span class="comando">interface fa0/2</span><br><span class="comando">switchport mode access</span><br><span class="comando">switchport access vlan 60</span></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"><strong>SW3</strong></td>
+                        <td>fa0/1</td>
+                        <td>60 (LOGISTICA)</td>
+                        <td><span class="comando">interface fa0/1</span><br><span class="comando">switchport mode access</span><br><span class="comando">switchport access vlan 60</span></td>
+                    </tr>
+                    <tr>
+                        <td>fa0/2</td>
+                        <td>10 (VENTAS)</td>
+                        <td><span class="comando">interface fa0/2</span><br><span class="comando">switchport mode access</span><br><span class="comando">switchport access vlan 10</span></td>
+                    </tr>
+                    <tr>
+                        <td>fa0/3</td>
+                        <td>10 (VENTAS)</td>
+                        <td><span class="comando">interface fa0/3</span><br><span class="comando">switchport mode access</span><br><span class="comando">switchport access vlan 10</span></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"><strong>SW4</strong></td>
+                        <td>fa0/1</td>
+                        <td>10 (VENTAS)</td>
+                        <td><span class="comando">interface fa0/1</span><br><span class="comando">switchport mode access</span><br><span class="comando">switchport access vlan 10</span></td>
+                    </tr>
+                    <tr>
+                        <td>fa0/2</td>
+                        <td>50 (MARKETING)</td>
+                        <td><span class="comando">interface fa0/2</span><br><span class="comando">switchport mode access</span><br><span class="comando">switchport access vlan 50</span></td>
+                    </tr>
+                    <tr>
+                        <td>fa0/3</td>
+                        <td>30 (FINANZAS)</td>
+                        <td><span class="comando">interface fa0/3</span><br><span class="comando">switchport mode access</span><br><span class="comando">switchport access vlan 30</span></td>
+                    </tr>
+                </tbody>
+            </table>
+	
+	<p>
+	</p>
+
+	<h4>D2 - Configuración WiFi</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Puerto</th>
+                        <th>VLAN</th>
+                        <th>Comandos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gig1/0/11</td>
+                        <td>80 (WIFI-CLIENTE)</td>
+                        <td><span class="comando">interface Gig1/0/11</span><br><span class="comando">switchport mode access</span><br><span class="comando">switchport access vlan 80</span></td>
+                    </tr>
+                    <tr>
+                        <td>Gig1/0/12</td>
+                        <td>40 (WIFI-EJECUTIVO)</td>
+                        <td><span class="comando">interface Gig1/0/12</span><br><span class="comando">switchport mode access</span><br><span class="comando">switchport access vlan 40</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+	<p>
+	</p>
+
+	<h4>D3 - Configuración Servidores</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Puertos</th>
+                        <th>VLAN</th>
+                        <th>Comandos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gig1/0/10 - Gig1/0/14</td>
+                        <td>90 (SERVIDORES)</td>
+                        <td><span class="comando">interface Gig1/0/10</span><br><span class="comando">switchport mode access</span><br><span class="comando">switchport access vlan 90</span><br><br>(Repetir para puertos 11, 12, 13, 14)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+	<p>
+	</p>
+
+	<h4>Configuración de Enlaces Trunk</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dispositivo</th>
+                        <th>Puertos</th>
+                        <th>Destino</th>
+                        <th>Comandos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>CORE</strong></td>
+                        <td>Gig1/0/2, Gig1/0/3, Gig1/0/4</td>
+                        <td>D1, D2, D3</td>
+                        <td><span class="comando">interface Gig1/0/2</span><br><span class="comando">switchport mode trunk</span><br><span class="comando">switchport trunk allowed vlan all</span><br><br>(Repetir para 1/0/3 y 1/0/4)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>D1</strong></td>
+                        <td>Gig1/0/11, Gig1/0/12</td>
+                        <td>WiFi</td>
+                        <td><span class="comando">interface Gig1/0/11</span><br><span class="comando">switchport mode trunk</span><br><span class="comando">switchport trunk allowed vlan all</span><br><br>(Repetir para 1/0/12)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>D2/D3</strong></td>
+                        <td>Gig1/0/1, Gig1/0/6-9</td>
+                        <td>SW1, SW2, SW3, SW4</td>
+                        <td><span class="comando">interface Gig1/0/1</span><br><span class="comando">switchport mode trunk</span><br><span class="comando">switchport trunk allowed vlan all</span><br><br>(Repetir para 1/0/6, 1/0/7, 1/0/8, 1/0/9)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SW (Acceso)</strong></td>
+                        <td>Gig0/1</td>
+                        <td>PC</td>
+                        <td><span class="comando">interface Gig0/1</span><br><span class="comando">switchport mode trunk</span><br><span class="comando">switchport trunk allowed vlan all</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+	<p>
+	</p>
+
+	<h4>Configuración de Interfaces VLAN - LIMA</h4>
+            <table>
+                <thead>
+                <tr>
+                    <th>VLAN</th>
+                    <th>IP Address</th>
+                    <th>Subnet Mask</th>
+                    <th>Comandos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="vlan-badge">VLAN 10</span></td>
+                    <td>172.21.40.1</td>
+                    <td>255.255.255.0</td>
+                    <td><code class="command">interface Vlan 10</code><code class="command">ip address 172.21.40.1 255.255.255.0</code><code class="command">no shutdown</code></td>
+                </tr>
+                <tr>
+                    <td><span class="vlan-badge">VLAN 20</span></td>
+                    <td>172.21.41.1</td>
+                    <td>255.255.255.128</td>
+                    <td><code class="command">interface Vlan 20</code><code class="command">ip address 172.21.41.1 255.255.255.128</code><code class="command">no shutdown</code></td>
+                </tr>
+                <tr>
+                    <td><span class="vlan-badge">VLAN 30</span></td>
+                    <td>172.21.41.129</td>
+                    <td>255.255.255.192</td>
+                    <td><code class="command">interface Vlan 30</code><code class="command">ip address 172.21.41.129 255.255.255.192</code><code class="command">no shutdown</code></td>
+                </tr>
+                <tr>
+                    <td><span class="vlan-badge">VLAN 40</span></td>
+                    <td>172.21.41.193</td>
+                    <td>255.255.255.192</td>
+                    <td><code class="command">interface Vlan 40</code><code class="command">ip address 172.21.41.193 255.255.255.192</code><code class="command">no shutdown</code></td>
+                </tr>
+                <tr>
+                    <td><span class="vlan-badge">VLAN 50</span></td>
+                    <td>172.21.42.1</td>
+                    <td>255.255.255.224</td>
+                    <td><code class="command">interface Vlan 50</code><code class="command">ip address 172.21.42.1 255.255.255.224</code><code class="command">no shutdown</code></td>
+                </tr>
+                <tr>
+                    <td><span class="vlan-badge">VLAN 60</span></td>
+                    <td>172.21.42.33</td>
+                    <td>255.255.255.224</td>
+                    <td><code class="command">interface Vlan 60</code><code class="command">ip address 172.21.42.33 255.255.255.224</code><code class="command">no shutdown</code></td>
+                </tr>
+                <tr>
+                    <td><span class="vlan-badge">VLAN 70</span></td>
+                    <td>172.21.42.65</td>
+                    <td>255.255.255.224</td>
+                    <td><code class="command">interface Vlan 70</code><code class="command">ip address 172.21.42.65 255.255.255.224</code><code class="command">no shutdown</code></td>
+                </tr>
+                <tr>
+                    <td><span class="vlan-badge">VLAN 80</span></td>
+                    <td>192.168.42.97</td>
+                    <td>255.255.255.224</td>
+                    <td><code class="command">interface Vlan 80</code><code class="command">ip address 192.168.42.97 255.255.255.224</code><code class="command">no shutdown</code></td>
+                </tr>
+                <tr>
+                    <td><span class="vlan-badge">VLAN 90</span></td>
+                    <td>192.168.42.129</td>
+                    <td>255.255.255.240</td>
+                    <td><code class="command">interface Vlan 90</code><code class="command">ip address 192.168.42.129 255.255.255.240</code><code class="command">no shutdown</code></td>
+                </tr>
+            </tbody>
+            </table>
+
+	<p>
+	</p>
+
+	<h4>Configuración de Interfaces VLAN - LA LIBERTAD</h4>
+            <table>
+                <thead>
+                <tr>
+                    <th>Subinterfaz</th>
+                    <th>VLAN</th>
+                    <th>IP Address</th>
+                    <th>Subnet Mask</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Gig 0/0.10</td><td><span class="vlan-badge">VLAN 10</span></td><td>172.21.44.1</td><td>255.255.255.128</td></tr>
+                <tr><td>Gig 0/0.20</td><td><span class="vlan-badge">VLAN 20</span></td><td>172.21.44.129</td><td>255.255.255.192</td></tr>
+                <tr><td>Gig 0/0.30</td><td><span class="vlan-badge">VLAN 30</span></td><td>172.21.44.193</td><td>255.255.255.224</td></tr>
+                <tr><td>Gig 0/0.40</td><td><span class="vlan-badge">VLAN 40</span></td><td>172.21.44.225</td><td>255.255.255.240</td></tr>
+                <tr><td>Gig 0/0.50</td><td><span class="vlan-badge">VLAN 50</span></td><td>172.21.44.241</td><td>255.255.255.240</td></tr>
+                <tr><td>Gig 0/0.60</td><td><span class="vlan-badge">VLAN 60</span></td><td>172.21.45.1</td><td>255.255.255.240</td></tr>
+                <tr><td>Gig 0/0.70</td><td><span class="vlan-badge">VLAN 70</span></td><td>172.21.45.17</td><td>255.255.255.240</td></tr>
+                <tr><td>Gig 0/0.80</td><td><span class="vlan-badge">VLAN 80</span></td><td>172.21.45.33</td><td>255.255.255.240</td></tr>
+                <tr><td>Gig 0/0.90</td><td><span class="vlan-badge">VLAN 90</span></td><td>172.21.45.49</td><td>255.255.255.248</td></tr>
+            </tbody>
+            </table>
+
+	<p>
+	</p>
+
+	<h4>Configuración de Interfaces VLAN - ICA</h4>
+            <table>
+                <thead>
+                <tr>
+                    <th>Subinterfaz</th>
+                    <th>VLAN</th>
+                    <th>IP Address</th>
+                    <th>Subnet Mask</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Gig 0/0.10</td><td><span class="vlan-badge">VLAN 10</span></td><td>172.21.48.1</td><td>255.255.255.192</td></tr>
+                <tr><td>Gig 0/0.20</td><td><span class="vlan-badge">VLAN 20</span></td><td>172.21.48.65</td><td>255.255.255.224</td></tr>
+                <tr><td>Gig 0/0.30</td><td><span class="vlan-badge">VLAN 30</span></td><td>172.21.48.97</td><td>255.255.255.240</td></tr>
+                <tr><td>Gig 0/0.40</td><td><span class="vlan-badge">VLAN 40</span></td><td>172.21.48.113</td><td>255.255.255.240</td></tr>
+                <tr><td>Gig 0/0.50</td><td><span class="vlan-badge">VLAN 50</span></td><td>172.21.48.129</td><td>255.255.255.240</td></tr>
+                <tr><td>Gig 0/0.60</td><td><span class="vlan-badge">VLAN 60</span></td><td>172.21.48.145</td><td>255.255.255.240</td></tr>
+                <tr><td>Gig 0/0.70</td><td><span class="vlan-badge">VLAN 70</span></td><td>172.21.48.161</td><td>255.255.255.248</td></tr>
+                <tr><td>Gig 0/0.80</td><td><span class="vlan-badge">VLAN 80</span></td><td>172.21.48.169</td><td>255.255.255.248</td></tr>
+                <tr><td>Gig 0/0.90</td><td><span class="vlan-badge">VLAN 90</span></td><td>172.21.48.177</td><td>255.255.255.248</td></tr>
+            </tbody>
+            </table>
+
+	<p>
+	</p>
+
+	<h4>Configuración de Interfaces VLAN - HUANUCO</h4>
+            <table>
+                <thead>
+                <tr>
+                    <th>Subinterfaz</th>
+                    <th>VLAN</th>
+                    <th>IP Address</th>
+                    <th>Subnet Mask</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Gig 0/0.10</td><td><span class="vlan-badge">VLAN 10</span></td><td>172.21.52.1</td><td>255.255.255.192</td></tr>
+                <tr><td>Gig 0/0.20</td><td><span class="vlan-badge">VLAN 20</span></td><td>172.21.52.65</td><td>255.255.255.224</td></tr>
+                <tr><td>Gig 0/0.30</td><td><span class="vlan-badge">VLAN 30</span></td><td>172.21.52.97</td><td>255.255.255.240</td></tr>
+                <tr><td>Gig 0/0.40</td><td><span class="vlan-badge">VLAN 40</span></td><td>172.21.52.113</td><td>255.255.255.240</td></tr>
+                <tr><td>Gig 0/0.50</td><td><span class="vlan-badge">VLAN 50</span></td><td>172.21.52.129</td><td>255.255.255.240</td></tr>
+                <tr><td>Gig 0/0.60</td><td><span class="vlan-badge">VLAN 60</span></td><td>172.21.52.145</td><td>255.255.255.248</td></tr>
+                <tr><td>Gig 0/0.70</td><td><span class="vlan-badge">VLAN 70</span></td><td>172.21.52.153</td><td>255.255.255.248</td></tr>
+                <tr><td>Gig 0/0.80</td><td><span class="vlan-badge">VLAN 80</span></td><td>172.21.52.161</td><td>255.255.255.248</td></tr>
+                <tr><td>Gig 0/0.90</td><td><span class="vlan-badge">VLAN 90</span></td><td>172.21.52.169</td><td>255.255.255.248</td></tr>
+            </tbody>
+            </table>
+
+	<p>
+	</p>
+
+	<h4>Configuración de Interfaces VLAN - PUNO</h4>
+            <table>
+                <thead>
+                <tr>
+                    <th>Subinterfaz</th>
+                    <th>VLAN</th>
+                    <th>IP Address</th>
+                    <th>Subnet Mask</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Gig 0/0.10</td><td><span class="vlan-badge">VLAN 10</span></td><td>172.21.56.1</td><td>255.255.255.192</td></tr>
+                <tr><td>Gig 0/0.20</td><td><span class="vlan-badge">VLAN 20</span></td><td>172.21.56.65</td><td>255.255.255.224</td></tr>
+                <tr><td>Gig 0/0.30</td><td><span class="vlan-badge">VLAN 30</span></td><td>172.21.56.97</td><td>255.255.255.240</td></tr>
+                <tr><td>Gig 0/0.40</td><td><span class="vlan-badge">VLAN 40</span></td><td>172.21.56.113</td><td>255.255.255.240</td></tr>
+                <tr><td>Gig 0/0.50</td><td><span class="vlan-badge">VLAN 50</span></td><td>172.21.56.129</td><td>255.255.255.240</td></tr>
+                <tr><td>Gig 0/0.60</td><td><span class="vlan-badge">VLAN 60</span></td><td>172.21.56.145</td><td>255.255.255.248</td></tr>
+                <tr><td>Gig 0/0.70</td><td><span class="vlan-badge">VLAN 70</span></td><td>172.21.56.153</td><td>255.255.255.248</td></tr>
+                <tr><td>Gig 0/0.80</td><td><span class="vlan-badge">VLAN 80</span></td><td>172.21.56.161</td><td>255.255.255.248</td></tr>
+                <tr><td>Gig 0/0.90</td><td><span class="vlan-badge">VLAN 90</span></td><td>172.21.56.169</td><td>255.255.255.248</td></tr>
+            </tbody>
+            </table>
+
 </Layout>

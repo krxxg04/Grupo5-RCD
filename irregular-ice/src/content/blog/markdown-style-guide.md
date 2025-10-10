@@ -2,213 +2,41 @@
 title: 'Sede Principal - Lima'
 description: 'La sede principal de MIEMPRESA se encuentra en Lima, Perú, y es el centro neurálgico de todas las operaciones corporativas. Desde aquí se gestionan las actividades estratégicas, financieras y administrativas que impulsan el crecimiento y la expansión de la empresa a nivel global.'
 pubDate: 'Oct 10 2025'
-heroImage: '../../assets/blog-placeholder-about.jpg'
+heroImage: '../../assets/Lima.jpg'
 ---
 
-Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
+### Topología Física y Lógica de la red (Lima)
+
+![alt text](../../../public/Lima-Sede.png)
+
+##### Nombre: Sede Principal - Lima
+##### Dirección IP: 172.21.40.0/22
+
+| Unidad Organizacional | Nombre de la VLAN | VLAN ID (VID) | Requisitos para host actuales | Requisitos para host actuales (20%) | Longitud de prefijo (LP) |
+|-----------------------|-------------------|---------------:|-------------------------------:|------------------------------------:|-------------------------:|
+| Ventas                | VENTAS            |             10 |                            198 |                              237.6 | /24                      |
+| Administracion        | ADMINISTRACION    |             20 |                            100 |                              120.0 | /25                      |
+| Finanzas              | FINANZAS          |             30 |                             41 |                               49.2 | /26                      |
+| Wifi-Ejecutivos       | WIFI-EJECUTIVO    |             40 |                             31 |                               37.2 | /26                      |
+| Marketing             | MARKETING         |             50 |                             29 |                               34.8 | /27                      |
+| Logistica             | LOGISTICA         |             60 |                             25 |                               30.0 | /27                      |
+| Nativa                | NATIVA            |             70 |                             20 |                               24.0 | /27                      |
+| Wifi-Clientes         | WIFI-CLIENTE      |             80 |                             18 |                               21.6 | /27                      |
+| Servidores            | SERVIDORES        |             90 |                             10 |                               12.0 | /28                      |
+| **Total**             |                   |                |                            472 |                              566.4 |                          |
+
+| Mascara Sub red      | Direccion de red    | Primer host       | Ultimo Host       | Direccion broadcast |
+|----------------------|---------------------|-------------------|-------------------:|--------------------:|
+| 255.255.255.0        | 172.21.40.0         | 172.21.40.1       | 172.21.40.254     | 172.21.40.255       |
+| 255.255.255.128      | 172.21.41.0         | 172.21.41.1       | 172.21.41.126     | 172.21.41.127       |
+| 255.255.255.192      | 172.21.41.128       | 172.21.41.129     | 172.21.41.190     | 172.21.41.191       |
+| 255.255.255.192      | 172.21.41.192       | 172.21.41.193     | 172.21.41.254     | 172.21.41.255       |
+| 255.255.255.224      | 172.21.42.0         | 172.21.42.1       | 172.21.42.30      | 172.21.42.31        |
+| 255.255.255.224      | 172.21.42.32        | 172.21.42.33      | 172.21.42.62      | 172.21.42.63        |
+| 255.255.255.224      | 172.21.42.64        | 172.21.42.65      | 172.21.42.94      | 172.21.42.95        |
+| 255.255.255.224      | 172.21.42.96        | 172.21.42.97      | 172.21.42.126     | 172.21.42.127       |
+| 255.255.255.240      | 172.21.42.128       | 172.21.42.129     | 172.21.42.142     | 172.21.42.143       |
 
-## Headings
 
-The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
 
-# H1
 
-## H2
-
-### H3
-
-#### H4
-
-##### H5
-
-###### H6
-
-## Paragraph
-
-Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
-
-Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
-
-## Images
-
-### Syntax
-
-```markdown
-![Alt text](./full/or/relative/path/of/image)
-```
-
-### Output
-
-![blog placeholder](../../assets/blog-placeholder-about.jpg)
-
-## Blockquotes
-
-The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
-
-### Blockquote without attribution
-
-#### Syntax
-
-```markdown
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
-> **Note** that you can use _Markdown syntax_ within a blockquote.
-```
-
-#### Output
-
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
-> **Note** that you can use _Markdown syntax_ within a blockquote.
-
-### Blockquote with attribution
-
-#### Syntax
-
-```markdown
-> Don't communicate by sharing memory, share memory by communicating.<br>
-> — <cite>Rob Pike[^1]</cite>
-```
-
-#### Output
-
-> Don't communicate by sharing memory, share memory by communicating.<br>
-> — <cite>Rob Pike[^1]</cite>
-
-[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
-
-## Tables
-
-### Syntax
-
-```markdown
-| Italics   | Bold     | Code   |
-| --------- | -------- | ------ |
-| _italics_ | **bold** | `code` |
-```
-
-### Output
-
-| Italics   | Bold     | Code   |
-| --------- | -------- | ------ |
-| _italics_ | **bold** | `code` |
-
-## Code Blocks
-
-### Syntax
-
-we can use 3 backticks ``` in new line and write snippet and close with 3 backticks on new line and to highlight language specific syntax, write one word of language name after first 3 backticks, for eg. html, javascript, css, markdown, typescript, txt, bash
-
-````markdown
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
-</html>
-```
-````
-
-### Output
-
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
-</html>
-```
-
-## List Types
-
-### Ordered List
-
-#### Syntax
-
-```markdown
-1. First item
-2. Second item
-3. Third item
-```
-
-#### Output
-
-1. First item
-2. Second item
-3. Third item
-
-### Unordered List
-
-#### Syntax
-
-```markdown
-- List item
-- Another item
-- And another item
-```
-
-#### Output
-
-- List item
-- Another item
-- And another item
-
-### Nested list
-
-#### Syntax
-
-```markdown
-- Fruit
-  - Apple
-  - Orange
-  - Banana
-- Dairy
-  - Milk
-  - Cheese
-```
-
-#### Output
-
-- Fruit
-  - Apple
-  - Orange
-  - Banana
-- Dairy
-  - Milk
-  - Cheese
-
-## Other Elements — abbr, sub, sup, kbd, mark
-
-### Syntax
-
-```markdown
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
-
-H<sub>2</sub>O
-
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
-
-Press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Delete</kbd> to end the session.
-
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
-```
-
-### Output
-
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
-
-H<sub>2</sub>O
-
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
-
-Press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Delete</kbd> to end the session.
-
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.

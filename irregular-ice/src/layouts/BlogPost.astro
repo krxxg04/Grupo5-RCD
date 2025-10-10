@@ -30,12 +30,52 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				box-shadow: var(--box-shadow);
 			}
 			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
+				width: 960px; /* base width */
+				max-width: calc(100% - 4em);
+				margin: 2em auto; /* add vertical breathing room */
+				padding: 2em 2.5em; /* more padding */
 				color: white;
+				line-height: 1.75; /* increase line-height for readability */
+				/* allow horizontal scroll inside the prose area for narrow screens */
+				overflow-x: auto;
 			}
+
+			/* table improvements */
+			table {
+				/* default for narrow screens: allow table to size itself and enable scrolling */
+				width: max-content;
+				table-layout: auto;
+				border-collapse: collapse;
+				margin: 1.5em 0;
+				background: rgba(255,255,255,0.03);
+				border-radius: 8px;
+				overflow: hidden;
+				white-space: nowrap; /* keep columns on one line by default */
+				font-size: 0.95rem; /* slightly smaller so wide tables fit better */
+				/* center table inside prose container */
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			/* On wide screens, make the prose area larger and let the table fill the container */
+			@media (min-width: 1400px) {
+				.prose { width: 1180px; max-width: 1180px; }
+				table { width: 100%; white-space: normal; table-layout: fixed; margin-left: auto; margin-right: auto; }
+				table thead th, table tbody td { white-space: normal; }
+			}
+			table thead th {
+				text-align: left;
+				padding: 0.8em 1em;
+				font-weight: 700;
+				border-bottom: 1px solid rgba(255,255,255,0.08);
+			}
+			table tbody td {
+				padding: 0.7em 1em;
+				vertical-align: top;
+				border-bottom: 1px solid rgba(255,255,255,0.03);
+				font-size: 0.95rem;
+			}
+			table tr:last-child td { border-bottom: none; }
 			.title {
 				margin-bottom: 1em;
 				padding: 1em 0;
