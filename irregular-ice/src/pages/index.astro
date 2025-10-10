@@ -3,6 +3,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { Image } from 'astro:assets';
+import Grupo5 from '../assets/grupo-5.png';
 ---
 
 <!doctype html>
@@ -14,7 +16,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		<Header />
 		<main>
 			<h1>CASO 1 - GRUPO 5</h1>
-			<img src="../public/grupo-5.png" alt="Grupo 5" />
+            <Image src={Grupo5} alt="Grupo 5" />
 			<p>
 				MIEMPRESA presenta problemas operativos por la falta de una red estandarizada y documentada. La expansión sin planificación ha causado incompatibilidades y duplicidad de direcciones IP entre sedes, generando fallas de conectividad y afectando las operaciones. Se requiere una solución integral que corrija estos problemas y permita un crecimiento ordenado a futuro.
 			</p>
